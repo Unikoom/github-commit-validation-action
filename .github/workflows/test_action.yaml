@@ -1,0 +1,13 @@
+# .github/workflows/test_action.yaml
+name: Test Action
+on: [push]
+
+jobs:
+  check-validation:
+    runs-on: ubuntu-latest
+    name: Check commit signin
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: check-commit
+        uses: ./
